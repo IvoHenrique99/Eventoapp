@@ -2,6 +2,7 @@ package com.eventoapp.controllers;
 
 import com.eventoapp.models.Evento;
 import com.eventoapp.repository.EventoRepository;
+import com.google.common.collect.Iterables;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -29,6 +30,9 @@ public class EventoController {
     public ModelAndView listaEventos() {
         ModelAndView mv = new ModelAndView("listaEventos");
         Iterable<Evento> eventos = er.findAll();
+        if(Iterables.size(eventos) == 0) {
+            return null;
+        }
         mv.addObject("eventos", eventos);
         return mv;
     }
