@@ -17,7 +17,7 @@ public class DataConfiguration {
         dataSource.setDriverClassName("com.mysql.cj.jdbc.Driver");
         dataSource.setUrl("jdbc:mysql://localhost:3306/eventosapp?useTimezone=true&serverTimezone=UTC&useSSL=false");
         dataSource.setUsername("root");
-        dataSource.setPassword("12345");
+        dataSource.setPassword("root");
         return dataSource;
     }
 

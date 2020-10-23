@@ -7,14 +7,7 @@
 <body>
 <h1>Lista de Eventos</h1>
 <h3><a href="/cadastrarEvento">Cadastrar Evento</a></h3>
-<div th:each="evento : ${eventos}">
-  <div class="row">
-    <p><span th: nome="${evento.nome}"></span></p>
-    <p><span th: local="${evento.local}"></span></p>
-    <p><span th: data="${evento.data}"></span></p>
-    <p><span th: horario="${evento.horario}"></span></p>
-  </div>
-</div>
+
 
 </body>
 </html>
